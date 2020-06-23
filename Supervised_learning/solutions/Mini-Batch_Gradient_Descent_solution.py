@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def MSEStep(X, y, W, b, learn_rate=0.001):
     """
     This function implements the gradient descent step for squared error as a

@@ -24,7 +24,12 @@ def MSEStep(X, y, W, b, learn_rate=0.005):
     b_new : intercept following gradient descent step
     """
 
-    # Fill in code
+    y_hat = np.matmul(X, W) + b
+
+    error = y - y_hat
+
+    W_new = W + learn_rate*np.matmul(error, X)
+    b_new = b + learn_rate * error.sum()
 
     return W_new, b_new
 

@@ -2,4 +2,8 @@
 
 This is a repository of the Udacity course: Introduction to Machine Learning with PyTorch.
 
-The repo is using Python 3.8 and has the following dependencies.
+The repo is using Python 3.8 and has the following dependencies:
+
+- numpy
+- matplotlib
+- pandas
