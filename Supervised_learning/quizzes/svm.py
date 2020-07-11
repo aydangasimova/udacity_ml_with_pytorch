@@ -11,11 +11,16 @@ X = data[:,0:2]
 y = data[:,2]
 
 # TODO: Create the model and assign it to the variable model.
+# Assign the features to the variable X, and the labels to the variable y.
+X = data[:,0:2]
+y = data[:,2]
+
+# TODO: Create the model and assign it to the variable model.
 # Find the right parameters for this model to achieve 100% accuracy on the dataset.
-model = SVC(kernel='rbf', gamma=27)
+model = SVC(C=18)
 
 # TODO: Fit the model.
-model.fit(X,y)
+model.fit(X, y)
 
 # TODO: Make predictions. Store them in the variable y_pred.
 y_pred = model.predict(X)
