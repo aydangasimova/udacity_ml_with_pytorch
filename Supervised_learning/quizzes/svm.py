@@ -5,12 +5,7 @@ import pandas as pd
 import numpy as np
 
 # Read the data.
-data = np.asarray(pd.read_csv('data.csv', header=None))
-# Assign the features to the variable X, and the labels to the variable y.
-X = data[:,0:2]
-y = data[:,2]
-
-# TODO: Create the model and assign it to the variable model.
+data = np.asarray(pd.read_csv('../data/svm_data.csv', header=None))
 # Assign the features to the variable X, and the labels to the variable y.
 X = data[:,0:2]
 y = data[:,2]
@@ -27,3 +22,4 @@ y_pred = model.predict(X)
 
 # TODO: Calculate the accuracy and assign it to the variable acc.
 acc = accuracy_score(y, y_pred)
+print(acc)
