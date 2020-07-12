@@ -9,22 +9,25 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 
 # Read in the data.
-data = np.asarray(pd.read_csv('../testing_modeks_data.csv', header=None))
+data = np.asarray(pd.read_csv('../data/testing_models_data.csv', header=None))
 # Assign the features to the variable X, and the labels to the variable y.
 X = data[:,0:2]
 y = data[:,2]
 
 # Use train test split to split your data
 # Use a test size of 25% and a random state of 42
-X_train, X_test, y_train, y_test = train_test_split(Xn )
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state=42)
 
 # Instantiate your decision tree model
-model = None
+model = DecisionTreeClassifier()
 
 # TODO: Fit the model to the training data.
+model.fit(X_train, y_train)
 
 # TODO: Make predictions on the test data
-y_pred = None
+y_pred = model.predict(X_test)
 
 # TODO: Calculate the accuracy and assign it to the variable acc on the test data.
-acc = None
+acc = accuracy_score(y_test, y_pred)
+
+print(acc)
